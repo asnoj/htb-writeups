@@ -177,8 +177,8 @@ type "2 for the price of one.txt"
 
 How the vulnerability could be fixed:
 
-- Change default credentials on the Tomcat Manager (`admin:admin` is a well-known default).
-- Restrict access to `/manager/html` to trusted IPs (e.g., via `manager.xml` `RemoteAddrValve`) or disable the Manager entirely in production.
+- Change default credentials on the Tomcat Manager (`tomcat:s3cret` is a very bad password).
+- Restrict access to `/manager/html` to trusted IPs or disable the Manager entirely in production.
 - Run Tomcat as a low-privileged user (not SYSTEM/root), so a compromised webapp does not yield full host control.
 - Disable WAR deployment from the Manager if not needed, or require stronger authentication (e.g., client certificates, MFA).
 - Keep Tomcat patched and remove default applications from production instances.
@@ -187,11 +187,8 @@ How the vulnerability could be fixed:
 
 ## What I learned / where I got stuck
 
-- **Default credentials are still a real-world issue.** `admin:admin` gave immediate access to a management interface that should never be exposed with weak auth.
+- **Very bad password are still a real-world issue.** `tomcat:s3cret` gave immediate access to a management interface that should never be exposed with weak auth.
 - **A WAR is just a ZIP.** Writing the JSP by hand made me understand what msfvenom actually generates, and how Tomcat handles JSP compilation and deployment.
-- **Context matters.** Checking `whoami` right after the shell revealed SYSTEM, which saved time — no privesc enumeration needed.
-- **Gotcha:** The raw JSP shell had line-ending issues with plain `nc`; using `rlwrap` or sending commands one at a time helped.
-- **Next time:** I'd try the same manual approach on a Linux Tomcat box to see how the JSP shell behaves with `/bin/bash` instead of `cmd.exe`.
 
 ---
 
