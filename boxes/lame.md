@@ -22,7 +22,7 @@ nmap -sC -sV -oN nmap/initial <IP>
 Notable services: FTP (vsftpd 2.3.4), SSH, SMB (Samba 3.0.20), distccd (3632).
 
 ## 2. Enumeration
-- vsftpd 2.3.4: known backdoor, but not exploitable here. TODO: what I observed.
+- vsftpd 2.3.4: known backdoor, but not exploitable here.
 - Samba 3.0.20: vulnerable to **CVE-2007-2447** (`username map script`).
 - distccd: vulnerable to **CVE-2004-2687** (command execution).
 
@@ -35,8 +35,12 @@ Via Samba usermap_script: root shell right away. Via distcc: `daemon` shell, the
 ## Mitigation
 Update Samba, disable `username map script`, don't expose distccd.
 
-## What I learned / where I got stuck
-- TODO
+## What I learned
+- Version-based vulnerability research: Learning how to extract exact software version banners from an nmap -sV scan (such as Samba 3.0.20 or vsftpd 2.3.4) and cross-reference them against public exploit databases using searchsploit and Metasploit's search command.
+- Filtering false leads : Understanding that a famous vulnerable version number (like vsftpd 2.3.4, known for its smiley-face backdoor) is not always exploitable in practice due to firewall rules, patched builds, or service configurations—requiring a methodical pivot to other open ports.
+- Metasploit fundamentals: Learning the core workflow of msfconsole: selecting an exploit module (use), inspecting required parameters (options), setting target (RHOSTS) and attacker VPN (LHOST) IP addresses, and catching a reverse shell.
+## where I got stuck
+- Testing vsftpd 2.3.4 first: Spending initial time trying to trigger the vsftpd backdoor on port 21 before realizing it was unresponsive and moving on to enumerate SMB on ports 139/445.
 
 ## References
 - CVE-2007-2447, CVE-2004-2687
