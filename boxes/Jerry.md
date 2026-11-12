@@ -42,9 +42,9 @@ Only one port is open: 8080, running Apache Tomcat. The default Tomcat page is s
 
 ## 2. Enumeration
 
-Visiting `http://10.10.10.95:8080` shows the standard Tomcat landing page. The Manager App link is present and prompts for HTTP Basic Auth.
+Visiting `http://10.129.136.9:8080` shows the standard Tomcat landing page. The Manager App link is present and prompts for HTTP Basic Auth.
 
-I tried common default credentials. The pair **admin:admin** granted access to the Tomcat Web Application Manager.
+I tried common default credentials. The pair **tomcat:s3cret** granted access to the Tomcat Web Application Manager.
 
 Once authenticated, the Manager exposes:
 
