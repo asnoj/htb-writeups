@@ -14,6 +14,7 @@ Each write-up covers the concepts I ran into, the tools I used, and where I got 
 | 2 | Blue   | Windows | Easy | SMB, EternalBlue (MS17-010) | 2026-11-11 | [link](boxes/blue.md) |
 | 3 | Legacy | Windows | Easy | SMB, MS08-067, MS17-010 | 2026-11-12 | [link](boxes/legacy.md) |
 | 4 | Lame   | Linux   | Easy | Samba usermap_script, distcc, Metasploit | 2026-11-12 | [link](boxes/lame.md) |
+| 5 | Jerry  | Windows | Easy | Tomcat default creds, WAR deployment, manual JSP reverse shell | 2026-11-12 | [link](boxes/jerry.md) |
 
 ## Notes
 
