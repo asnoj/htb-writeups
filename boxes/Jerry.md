@@ -6,7 +6,7 @@
 | **Difficulty** | Easy |
 | **IP** | 10.10.10.95 |
 | **Date** | 2026-11-12 |
-| **Time spent** | ~30 min |
+| **Time spent** | ~60 min |
 
 ## Concepts
 - Apache Tomcat default credentials
