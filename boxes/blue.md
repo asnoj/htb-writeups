@@ -21,7 +21,7 @@ nmap --script smb-vuln-ms17-010 -p445 <IP>
 ```
 
 ## 2. Exploitation
-**CVE-2017-0144** (EternalBlue). Gives SYSTEM directly. TODO: module options (RHOSTS, LHOST, payload), screenshots.
+**CVE-2017-0144** (EternalBlue). Gives SYSTEM directly.
 
 ## Mitigation
 Apply the MS17-010 patch, disable SMBv1.
