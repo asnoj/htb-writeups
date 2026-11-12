@@ -27,7 +27,7 @@
 ## 1. Recon
 
 ```bash
-nmap -sC -sV -oN nmap/initial 10.10.10.95
+sudo nmap -T4 -A -Pn 10.129.136.9
 ```
 
 **Interesting ports / findings:**
