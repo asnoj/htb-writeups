@@ -1,11 +1,12 @@
 # HTB – Jerry
 
 | | |
+|---|---|
 | **OS** | Windows (Server 2012 R2) |
 | **Difficulty** | Easy |
 | **IP** | 10.10.10.95 |
 | **Date** | 2026-11-12 |
-| **Time spent** | ~60 min |
+| **Time spent** | ~30 min |
 
 ## Concepts
 
