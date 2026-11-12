@@ -169,9 +169,8 @@ dir
 type "2 for the price of one.txt"
 ```
 
-- **user.txt**: done (not published)
-- **root.txt**: done (not published)
-
+- **user.txt**
+- **root.txt**
 ---
 
 ## Mitigation
